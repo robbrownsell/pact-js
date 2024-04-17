@@ -35,12 +35,12 @@ describe('GraphQL example', () => {
         .uponReceiving('a hello request')
         .withQuery(
           `
-          query HelloQuery {
-            hello
+          query helloQuery {
+            helloQuery
           }
         `
         )
-        .withOperation('HelloQuery')
+        .withOperation('helloQuery')
         .withRequest({
           path: '/graphql',
           method: 'POST',
@@ -51,11 +51,11 @@ describe('GraphQL example', () => {
         .willRespondWith({
           status: 200,
           headers: {
-            'Content-Type': 'application/json; charset=utf-8',
+            'Content-Type': 'application/json',
           },
           body: {
             data: {
-              hello: like('Hello world!'),
+              helloQuery: like('Hello world!'),
             },
           },
         });

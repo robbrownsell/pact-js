@@ -18,8 +18,8 @@ export function query(): any {
   return client
     .query({
       query: gql`
-        query HelloQuery {
-          hello
+        query helloQuery {
+          helloQuery
         }
       `,
       variables: {
