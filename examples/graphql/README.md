@@ -8,3 +8,9 @@ Test it out here:
 npm run test:consumer
 npm run test:provider
 ```
+
+Publish it to the broker:
+
+```
+npm run test:publish
+```
