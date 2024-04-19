@@ -32,6 +32,7 @@ describe('GraphQL example', () => {
   describe('query hello on /graphql', () => {
     before(() => {
       const graphqlQuery = new GraphQLInteraction()
+        .given('a hello query')
         .uponReceiving('a hello request')
         .withQuery(
           `
